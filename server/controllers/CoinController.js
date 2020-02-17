@@ -6,7 +6,7 @@ static getLatestCurrency(req, res) {
       {
         params: {
           start: 1,
-          limit: 1,
+          limit: 100,
           convert: 'USD'
         },
         headers: {
@@ -22,8 +22,7 @@ static getLatestCurrency(req, res) {
       });
     })
     .catch(error => {
-    //   res.status(500).json({ error: error.message })
-    console.log('API call error:', error.message);
+      res.status(500).json({ error: error.message })
     });
 }
 }
