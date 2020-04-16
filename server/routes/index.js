@@ -1,7 +1,6 @@
 import coinRoute from  './coinRoute';
 
 const routes = (app) => {
-  console.log('came here');
   app.get('/', (request, response) => response.status(200).json({
     message: 'coin Application',
   }));
