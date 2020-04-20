@@ -32,14 +32,16 @@
     "winston": "^3.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "babel-node app.js",
+    "start:web": "react-scripts start",
+    "server": "nodemon app.js --exec babel-node",
     "start:backdev": "nodemon  app.js --exec babel-node --presets es2015",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": "10.x"
+    "node": "13.x"
   },
   "eslintConfig": {
     "extends": "react-app"
