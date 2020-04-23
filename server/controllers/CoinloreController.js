@@ -2,10 +2,12 @@ import axios from 'axios';
 
 class CoinloreController {
 static getAllCoins(req, res) {
+  const count = parseInt(req.params.start, 10);
+  const start = count || 0;
     axios.get(' https://api.coinlore.net/api/tickers/',
       {
         params: {
-          start: 90,
+          start,
           limit: 100,
         }
       }
